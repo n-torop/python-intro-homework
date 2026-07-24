@@ -1,12 +1,14 @@
-score=93
+score=int(input("Input score: "))
+#score=93
 grade=str
-if (90>=score)<=100:
+if score>=90 and score<=100:
+    print (score)
     grade="A"
-elif (80>=score)<=89:
+elif score>=80 and score<=89:
     grade="B"
-elif (70>=score)<=79:
+elif score>=70 and score<=79:
     grade="C"
-elif (60>=score)<=69:
+elif score>=60 and score<=69:
     grade="D"
 else:
     grade="F"
