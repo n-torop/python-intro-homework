@@ -279,27 +279,46 @@ def validate_input(user_input):
     else:
         return cleaned
 
+def dict_check(to_check_day, to_check_time):
+    if to_check_day in DEFAULT_DATA and to_check_time in DEFAULT_DATA[to_check_day]:
+        return DEFAULT_DATA[to_check_day][to_check_time]["suggestion"]
+    else:
+        return "Not found"
+
 
 def positive ():
-    print (f'\nDuration: {DEFAULT_DATA[revised_day][revised_time]["metadata"]["duration"]}\nLocation: {DEFAULT_DATA[revised_day][revised_time]["metadata"]["location"]}\nEnergy level: {DEFAULT_DATA[revised_day][revised_time]["metadata"]["energy_level"]}')
-
-def negative():
-    return
+    print (f'\nDuration: {DEFAULT_DATA[revised_day][revised_time]["metadata"]["duration"]}\nLocation: {DEFAULT_DATA[revised_day][revised_time]["metadata"]["location"]}\nEnergy level: {DEFAULT_DATA[revised_day][revised_time]["metadata"]["energy_level"]}\n')
 
 def quitting():
-    return False
+    print ("Quitting...")
+
+def negative():
+    return None
 
 def default_action():
-    return "Not recognized. Try again (Y/N/q) "
+    print ("Not recognized. Try again (Y/N/q) ")
+    return "Invalid"
 
 actions = {
         "yes": positive, 
         "y": positive,
         "no": negative,
         'n': negative,
-        "q": default_action,
-        "quit": default_action
+        "q": quitting,
+        "quit": quitting
     }
+ 
+#check default_action
+def selected_function(input_yes_no):
+    return actions.get(input_yes_no, default_action)
+
+def output_check(result, meta_data):
+    if result!="Not found":
+        # meta_user=input("Do you want to see more info? Y/N/q: ").lower().strip()
+        answer_function=selected_function(meta_data)
+        return answer_function()
+    else:
+        return None
 
 while True:
     day_user=input("What day is it? (q for quit) ")
@@ -312,14 +331,18 @@ while True:
         break
     revised_day=validate_input(day_user)
     revised_time=validate_input(time_user)
-    if revised_day in DEFAULT_DATA:
-    # and revised_time in DEFAULT_DATA:
-        # print ("yes")
-        print (DEFAULT_DATA[revised_day][revised_time]["suggestion"])
-    else:
-        print ("No!")
-    meta_user=input("Do you want to see more info? Y/N/q: ").lower().strip()
+    output=dict_check(revised_day, revised_time)
+    print (output)
+    while True:
+        meta_user=input("Do you want to see more info? Y/N/q: ").lower().strip()
+        if meta_user not in ["yes", 'no', 'y', 'n', 'q', 'quit']:
+            print (default_action())
+        else: 
+            break
+    upd_result=output_check (output, meta_user)
+    if meta_user=="q":
+        break
+        
     
-    # selected_function=actions.get(meta_user, default_action)
-    # selected_function()
-# # def retrieve_data()
+
+    
