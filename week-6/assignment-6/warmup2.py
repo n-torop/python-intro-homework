@@ -9,9 +9,6 @@ def fahrenheit_to_celsius(f):
     ans= f'{f}°F = {result}°C'
     return ans
 
-def printing (gr, res):
-    
-    print (f'{gr}°C = {celsius_to_fahrenheit(res)}°F')
 gr=0
 print (celsius_to_fahrenheit(gr))
 gr=100
