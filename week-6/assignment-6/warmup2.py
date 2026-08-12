@@ -1,12 +1,20 @@
 def celsius_to_fahrenheit(c):
     result= round((c * 9/5) + 32, 1)
-    return result
+    ans= f'{c}°C = {result}°F'
+
+    return ans
+
 def fahrenheit_to_celsius(f):
     result= round((f - 32) * 5/9, 1)
-    return result
+    ans= f'{f}°F = {result}°C'
+    return ans
 
+def printing (gr, res):
+    
+    print (f'{gr}°C = {celsius_to_fahrenheit(res)}°F')
 gr=0
-# celsius_to_fahrenheit(gr)
-print (f'{gr}°C = {celsius_to_fahrenheit(gr)}°F')
-print (f'{gr}°C = {celsius_to_fahrenheit(100)}°F')
-print (f'{gr}°C = {celsius_to_fahrenheit(72)}°F')
+print (celsius_to_fahrenheit(gr))
+gr=100
+print (celsius_to_fahrenheit(gr))
+gr=72
+print (fahrenheit_to_celsius(gr))

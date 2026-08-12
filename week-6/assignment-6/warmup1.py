@@ -1,6 +1,6 @@
 def greet(name, greeting='Hello'):
     print( f"{greeting}, {name}!")
 
-greet('Natalia')
-greet('George', "Hola")
-greet('Elena', greeting="Hey")
+greet('Alex')
+greet('Alex', "Hola")
+greet('Alex', greeting="Hello")
