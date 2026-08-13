@@ -1,0 +1,5 @@
+print(not True and False, "# not True is False; False and False is False is False\n ")
+print(True or False and False, "# False and False is False; True or True is True\n")
+print(not (5 > 3), "# 5>3 is True and not 5>3 is False\n")
+print(10 == 10 and 4 != 4, "# 10 ==10 is True; True and 4!=4 is False; True and False is False\n")
+print(not False or not True, "# not False is True; not True is False; True or False is True\n")

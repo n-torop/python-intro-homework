@@ -1,0 +1,132 @@
+{
+    "monday": {
+        "morning": {
+            "suggestion": "Have a delicious breakfast!",
+            "metadata": {
+                "duration": "20 min",
+                "location": "kitchen",
+                "energy_level": "low"
+            }
+        },
+        "afternoon": {
+            "suggestion": "Work on that Python course!",
+            "metadata": {
+                "duration": "2 hours",
+                "location": "home",
+                "energy_level": "medium"
+            }
+        },
+        "evening": {
+            "suggestion": "It's gym time!",
+            "metadata": {
+                "duration": "1 hour",
+                "location": "gym",
+                "energy_level": "high"
+            }
+        }
+    },
+    "tuesday": {
+        "morning": {
+            "suggestion": "Go for a morning walk!",
+            "metadata": {
+                "duration": "30 min",
+                "location": "park",
+                "energy_level": "medium"
+            }
+        },
+        "afternoon": {
+            "suggestion": "Have you done your laundry and cooking, yet?",
+            "metadata": {
+                "duration": "1.5 hours",
+                "location": "home",
+                "energy_level": "medium"
+            }
+        },
+        "evening": {
+            "suggestion": "Relaxation time!",
+            "metadata": {
+                "duration": "2 hours",
+                "location": "living room",
+                "energy_level": "low"
+            }
+        }
+    },
+    "wednesday": {
+        "morning": {
+            "suggestion": "Read a book!",
+            "metadata": {
+                "duration": "45 min",
+                "location": "balcony",
+                "energy_level": "low"
+            }
+        },
+        "afternoon": {
+            "suggestion": "Study dictionaries in Python!",
+            "metadata": {
+                "duration": "1.5 hours",
+                "location": "home",
+                "energy_level": "medium"
+            }
+        },
+        "evening": {
+            "suggestion": "How about a run outside?",
+            "metadata": {
+                "duration": "40 min",
+                "location": "neighborhood",
+                "energy_level": "high"
+            }
+        }
+    },
+    "thursday": {
+        "morning": {
+            "suggestion": "Study German for 30 min!",
+            "metadata": {
+                "duration": "30 min",
+                "location": "bedroom",
+                "energy_level": "medium"
+            }
+        },
+        "afternoon": {
+            "suggestion": "Doctor's appointment at 3 pm!",
+            "metadata": {
+                "duration": "1 hour",
+                "location": "clinic",
+                "energy_level": "low"
+            }
+        },
+        "evening": {
+            "suggestion": "Relaxation time!",
+            "metadata": {
+                "duration": "2 hours",
+                "location": "living room",
+                "energy_level": "low"
+            }
+        }
+    },
+    "friday": {
+        "morning": {
+            "suggestion": "Watch a video in Spanish!",
+            "metadata": {
+                "duration": "25 min",
+                "location": "bedroom",
+                "energy_level": "low"
+            }
+        },
+        "afternoon": {
+            "suggestion": "Make a video on your gym progress!",
+            "metadata": {
+                "duration": "1 hour",
+                "location": "home - desk",
+                "energy_level": "medium"
+            }
+        },
+        "evening": {
+            "suggestion": "Calisthenics: pull ups and pistol squats!",
+            "metadata": {
+                "duration": "45 min",
+                "location": "Planet Fitness",
+                "energy_level": "high"
+            }
+        }
+    }
+}
