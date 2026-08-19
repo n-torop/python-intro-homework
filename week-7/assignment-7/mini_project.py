@@ -5,7 +5,7 @@ path="data/expenses.csv"
 
 
 if os.path.exists(path):
-    records=[]
+    # records=[]
     with open (path, 'r') as file:
         records=list(csv.DictReader(file))
         
