@@ -5,7 +5,7 @@ def read_csv(file):
         reader=csv.DictReader(f)
         for row in reader:
             
-            print (f'{row['name']}: {row['score']}')
+            print (f"{row['name']}: {row['score']}")
 
 
 path='../data/students.csv'

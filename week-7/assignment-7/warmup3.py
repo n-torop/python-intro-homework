@@ -7,5 +7,5 @@ if os.path.exists (file):
 else:
     print ("expenses.csv not found.")
 
-path=os.path.join("data", "expenses.csv")
+path=os.path.join("..", "data", "expenses.csv")
 print(path)

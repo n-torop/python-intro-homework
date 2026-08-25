@@ -1,22 +1,23 @@
 import csv, os
 from datetime import datetime
+import sys
 
 path="../data/expenses.csv"
 
 
 if os.path.exists(path):
-    print ("found")
+    
     with open (path, 'r') as file:
         records=list(csv.DictReader(file))
         
 
     for item in records:
         item['amount']=float(item['amount'])
-    # print (records)
+    
 
     food=[item for item in records if item['category'] == 'Food']
     total=sum (item['amount'] for item in food)
-    # print (total)
+    
 
     with open ('food_report.txt', 'w') as report:
         now=datetime.now()
@@ -30,5 +31,6 @@ if os.path.exists(path):
 
 else:
     print ("Error. File doesn't exist!")
+    sys.exit(1)
 
 
