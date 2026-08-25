@@ -1,7 +1,7 @@
 import csv, os
 from datetime import datetime
 
-path="data/expenses.csv"
+path="../data/expenses.csv"
 
 
 if os.path.exists(path):
@@ -25,9 +25,6 @@ if os.path.exists(path):
             report.write (f'{item['date']}: ${item['amount']}\n')
         report.write (f'Total: ${total:.2f}\n')
 
-
-
-        
 
 
 else:
