@@ -8,5 +8,5 @@ def open_file(file_name):
 
 
 
-user_file_name='data/notes.txt'
+user_file_name='../data/notes.txt'
 open_file(user_file_name)

@@ -8,6 +8,6 @@ def read_csv(file):
             print (f'{row['name']}: {row['score']}')
 
 
-path='data/students.csv'
+path='../data/students.csv'
 
 read_csv(path)

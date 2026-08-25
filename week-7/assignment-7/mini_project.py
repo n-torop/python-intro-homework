@@ -5,7 +5,7 @@ path="../data/expenses.csv"
 
 
 if os.path.exists(path):
-    # records=[]
+    print ("found")
     with open (path, 'r') as file:
         records=list(csv.DictReader(file))
         
@@ -20,11 +20,12 @@ if os.path.exists(path):
 
     with open ('food_report.txt', 'w') as report:
         now=datetime.now()
-        report.write (f'Food Expense Report — generated {now.strftime("%B %d, %Y")}\n')
+        report.write (f"Food Expense Report — generated {now.strftime('%B %d, %Y')}\n")
         for item in food:
-            report.write (f'{item['date']}: ${item['amount']}\n')
-        report.write (f'Total: ${total:.2f}\n')
-
+            report.write (f"{item['date']}: ${item['amount']:.2f}\n")
+            
+        report.write (f"Total: ${total:.2f}\n")
+    
 
 
 else:
