@@ -15,55 +15,40 @@ def collect_messy_data(path):
                     messy_list_dict.append (f"Row {index}: extra column detected — skipped")
                     continue
 
+                # try:
+                name=row["name"]
+                category=row["category"]
+                amount_val=row["amount"]
+                
+                dict_item={"name": name,
+                            "category": category,
+                            "amount": amount_val}
+                    
                 try:
-                    name=row["name"]
-                    category=row["category"]
-                    amount_val=row["amount"]
-                    
-                    dict_item={"name": name,
-                               "category": category,
-                               "amount": amount_val}
-                    
-                    try:
-                        amount=float(dict_item["amount"])
-                        clean_list_dict.append(dict_item)
+                    amount=float(dict_item["amount"])
+                    clean_list_dict.append(dict_item)
                       
-                    except ValueError:
-                        
-                        messy_list_dict.append(f"Row {index}: ValueError — could not convert '{dict_item["amount"]}' to float.")
-
-                        if amount=="" or name=="" or category=="":
-                            print ("empty")
-                            messy_list_dict.append(f"Row {index}: An expected column is missing from a row.")
-                    except KeyError:
-                        if name==None or category==None or amount==None:
-                            messy_list_dict.append(f"Row {index}: extra column detected — skipped")
                 except ValueError:
-                        messy_list_dict.append(f"Row {index}: ValueError — could not convert '{amount}' to float.")
+                    
+                    messy_list_dict.append(f"Row {index}: ValueError — could not convert '{dict_item["amount"]}' to float.")
 
-                        if amount=="" or name=="" or category=="":
-                            messy_list_dict.append(f"Row {index}: An expected column is missing from a row.")
+                    if amount=="" or name=="" or category=="":
+                        print ("empty")
+                        messy_list_dict.append(f"Row {index}: An expected column is missing from a row.")
                 except KeyError:
                     if name==None or category==None or amount==None:
                         messy_list_dict.append(f"Row {index}: extra column detected — skipped")
 
-                        
-
-
 
     except FileNotFoundError:
-        print("An error. File not found.")
+        print(f"An error. File not found at '{path}'. Please check the file path.")
         return 
     return clean_list_dict, messy_list_dict
 
 
-path_name="../data/messy_data.csv"
-
-
-clean_list_dict, messy_list_dict=collect_messy_data(path_name)
-
 def report(clean, messy):
     attempted_rows=len(clean)+len(messy)
+
     print ("=== CSV Report ===")
     print (f"Rows attempted:  {attempted_rows}")
     print (f"Rows parsed:     {len(clean)}")
@@ -75,7 +60,11 @@ def report(clean, messy):
     for item in clean:
         print (f"{item["name"]} | {item["category"]} | ${item["amount"]}")
 
+path_name="../data/messy_data.csv"
+
+clean_list_dict, messy_list_dict=collect_messy_data(path_name)
+
 report(clean_list_dict, messy_list_dict)
 
-collect_messy_data(path_name)
+# collect_messy_data(path_name)
 
