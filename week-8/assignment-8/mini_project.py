@@ -51,14 +51,14 @@ def report(clean, messy):
 
     print ("=== CSV Report ===")
     print (f"Rows attempted:  {attempted_rows}")
-    print (f"Rows parsed:     {len(clean)}")
-    print (f"Rows skipped:    {len(messy)}")
+    print (f"Rows parsed:      {len(clean)}")
+    print (f"Rows skipped:     {len(messy)}")
     print ("\nSkipped rows:")
     for el in messy:
         print (f"  {el}")
-    print ("Clean data:")
+    print ("\nClean data:")
     for item in clean:
-        print (f"{item["name"]} | {item["category"]} | ${item["amount"]}")
+        print (f"  {item['name']} | {item['category']} | ${item['amount']}")
 
 path_name="../data/messy_data.csv"
 
