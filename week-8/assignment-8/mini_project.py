@@ -30,7 +30,7 @@ def collect_messy_data(path):
                       
                 except ValueError:
                     
-                    messy_list_dict.append(f"Row {index}: ValueError — could not convert '{dict_item["amount"]}' to float.")
+                    messy_list_dict.append(f"Row {index}: ValueError — could not convert '{dict_item["amount"]}' to float")
 
                     if amount=="" or name=="" or category=="":
                         print ("empty")
@@ -60,11 +60,11 @@ def report(clean, messy):
     for item in clean:
         print (f"  {item['name']} | {item['category']} | ${item['amount']}")
 
+
 path_name="../data/messy_data.csv"
 
 clean_list_dict, messy_list_dict=collect_messy_data(path_name)
 
 report(clean_list_dict, messy_list_dict)
 
-# collect_messy_data(path_name)
 
