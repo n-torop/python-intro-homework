@@ -5,37 +5,26 @@ def menu():
 
 
 def find_min(data):
-    smaller=data[0]
-    counter=0
-    for el in data:
-        try: 
-            if smaller>data[counter+1]:
-                smaller=data[counter+1]
-            counter+=1
-        except IndexError:
-            break
-    print(smaller)
-    return smaller
+    min_val=numbers[0]
+    for num in data:
+        if num<min_val:
+            min_val=num
+    print (min_val)
+    return min_val
 
 def find_max(data):
-    bigger=data[0]
-    counter=0
-    for el in data:
-        try: 
-            if bigger<data[counter+1]:
-                bigger=data[counter+1]
-            counter+=1
-        except IndexError:
-            break
-    print(bigger)
-    return bigger
+    max_val=numbers[0]
+    for num in data:
+        if num>max_val:
+            max_val=num
+    print (max_val)
+    return max_val
 
 def search(data, user):
     found=False
     for i in range(len(data)):
-        new_i=i
         if data[i]==user:
-            print (new_i)
+            print(i)
             found=True
     if found==False:   
         print ("-1")
