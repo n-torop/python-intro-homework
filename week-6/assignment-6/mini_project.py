@@ -12,7 +12,6 @@ def find_min(data):
     for num in data:
         if num<min_val:
             min_val=num
-    
     return min_val
 
 def find_max(data):
@@ -20,7 +19,6 @@ def find_max(data):
     for num in data:
         if num>max_val:
             max_val=num
-    # print (max_val)
     return max_val
 
 def search(data, user):
@@ -29,10 +27,9 @@ def search(data, user):
         if data[i]==user:
             found=True
             return i
-            # break
     if found==False:   
         return -1
-    # return f"Found at index{i}"
+    
 
 def bubble_sort (data):
     copy=data.copy()
@@ -41,13 +38,10 @@ def bubble_sort (data):
         for m in range (n-i-1):
             if copy[m]>copy[m+1]:
                 copy[m], copy[m+1]=copy[m+1], copy[m]
-    print (copy)
     return copy
 
 def quitting(): 
     print ("Goodbye!")
-
-
 
 def main ():
     while True:
@@ -60,7 +54,6 @@ def main ():
             max_val=find_max (numbers)
             print (max_val)
         elif user_input=="3":
-
             value=int(input("Enter number to search: "))
             result=search (numbers, value)
             if result<0:
@@ -69,7 +62,8 @@ def main ():
                 print (f"Found at index {result}")
 
         elif user_input=="4":
-            bubble_sort (numbers)
+            print (bubble_sort (numbers))
+            
         elif user_input=="5":
             quitting()
             break
