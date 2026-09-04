@@ -1,0 +1,265 @@
+{
+    "data": {
+        "objects": [
+            {
+                "names": {
+                    "common": "Abkhazia"
+                },
+                "region": "Asia",
+                "population": 244236,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526831
+                }
+            },
+            {
+                "names": {
+                    "common": "Afghanistan"
+                },
+                "region": "Asia",
+                "population": 43844000,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526831
+                }
+            },
+            {
+                "names": {
+                    "common": "Albania"
+                },
+                "region": "Europe",
+                "population": 2335930,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783787495
+                }
+            },
+            {
+                "names": {
+                    "common": "Algeria"
+                },
+                "region": "Africa",
+                "population": 47400000,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786264211
+                }
+            },
+            {
+                "names": {
+                    "common": "American Samoa"
+                },
+                "region": "Oceania",
+                "population": 43268,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005246
+                }
+            },
+            {
+                "names": {
+                    "common": "Andorra"
+                },
+                "region": "Europe",
+                "population": 89752,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786028454
+                }
+            },
+            {
+                "names": {
+                    "common": "Angola"
+                },
+                "region": "Africa",
+                "population": 38778554,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1787528483
+                }
+            },
+            {
+                "names": {
+                    "common": "Anguilla"
+                },
+                "region": "Americas",
+                "population": 16010,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005246
+                }
+            },
+            {
+                "names": {
+                    "common": "Antarctica"
+                },
+                "region": "Antarctic",
+                "population": 1300,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005246
+                }
+            },
+            {
+                "names": {
+                    "common": "Antigua and Barbuda"
+                },
+                "region": "Americas",
+                "population": 106365,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786629496
+                }
+            },
+            {
+                "names": {
+                    "common": "Argentina"
+                },
+                "region": "Americas",
+                "population": 46466688,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1785840859
+                }
+            },
+            {
+                "names": {
+                    "common": "Armenia"
+                },
+                "region": "Asia",
+                "population": 3096900,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784561062
+                }
+            },
+            {
+                "names": {
+                    "common": "Aruba"
+                },
+                "region": "Americas",
+                "population": 110625,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526832
+                }
+            },
+            {
+                "names": {
+                    "common": "Australia"
+                },
+                "region": "Oceania",
+                "population": 27801023,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784561127
+                }
+            },
+            {
+                "names": {
+                    "common": "Austria"
+                },
+                "region": "Europe",
+                "population": 9217573,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786818728
+                }
+            },
+            {
+                "names": {
+                    "common": "Azerbaijan"
+                },
+                "region": "Asia",
+                "population": 10273450,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1788293110
+                }
+            },
+            {
+                "names": {
+                    "common": "Bahamas"
+                },
+                "region": "Americas",
+                "population": 398165,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786629496
+                }
+            },
+            {
+                "names": {
+                    "common": "Bahrain"
+                },
+                "region": "Asia",
+                "population": 1603260,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786629357
+                }
+            },
+            {
+                "names": {
+                    "common": "Bangladesh"
+                },
+                "region": "Asia",
+                "population": 169828911,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1788293472
+                }
+            },
+            {
+                "names": {
+                    "common": "Barbados"
+                },
+                "region": "Americas",
+                "population": 261692,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526832
+                }
+            },
+            {
+                "names": {
+                    "common": "Belarus"
+                },
+                "region": "Europe",
+                "population": 9056080,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1785726868
+                }
+            },
+            {
+                "names": {
+                    "common": "Belgium"
+                },
+                "region": "Europe",
+                "population": 11936546,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786314167
+                }
+            },
+            {
+                "names": {
+                    "common": "Belize"
+                },
+                "region": "Americas",
+                "population": 418982,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786629357
+                }
+            },
+            {
+                "names": {
+                    "common": "Benin"
+                },
+                "region": "Africa",
+                "population": 13551992,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1785856112
+                }
+            },
+            {
+                "names": {
+                    "common": "Bermuda"
+                },
+                "region": "Americas",
+                "population": 64055,
+                "_meta": {
+                    "lastUpdatedTimestamp": 1787167668
+                }
+            }
+        ],
+        "meta": {
+            "total": 254,
+            "count": 25,
+            "limit": 25,
+            "offset": 0,
+            "more": true,
+            "request_id": "a9ac48da-951a-4cbe-9e16-6b891e08f7ca",
+            "duration": 24
+        }
+    }
+}
