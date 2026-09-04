@@ -1,17 +1,17 @@
 def celsius_to_fahrenheit(c):
     result= round((c * 9/5) + 32, 1)
-    ans= f'{c}°C = {result}°F'
-
-    return ans
+    return result
 
 def fahrenheit_to_celsius(f):
     result= round((f - 32) * 5/9, 1)
-    ans= f'{f}°F = {result}°C'
-    return ans
+    return result
 
 gr=0
-print (celsius_to_fahrenheit(gr))
+result_c=celsius_to_fahrenheit(gr)
+print (f'{gr}°C = {result_c}°F')
 gr=100
-print (celsius_to_fahrenheit(gr))
+result_c=celsius_to_fahrenheit(gr)
+print (f'{gr}°C = {result_c}°F')
 gr=72
-print (fahrenheit_to_celsius(gr))
+result_f=fahrenheit_to_celsius(gr)
+print (f'{gr}°F = {result_f}°F')

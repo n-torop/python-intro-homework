@@ -3,6 +3,8 @@ def is_valid_score(score):
         return True
     elif score<0 or score>100:
         return False
+    elif score!=int:
+        return False
 
     
 try:

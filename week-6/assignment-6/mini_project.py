@@ -2,6 +2,9 @@ numbers = [42, 17, 83, 5, 61, 29, 74, 8, 55, 93, 31, 66, 14, 47, 78, 3, 59, 22, 
 
 def show_menu():
     print ("=== Number Cruncher === \n1. Find minimum\n2. Find maximum\n3. Search for a number\n4. Sort the list\n5. Quit")
+    user_choice=input("Choose an option (1-5): ")
+    print (user_choice)
+    return user_choice
 
 
 def find_min(data):
@@ -9,7 +12,7 @@ def find_min(data):
     for num in data:
         if num<min_val:
             min_val=num
-    print (min_val)
+    
     return min_val
 
 def find_max(data):
@@ -17,17 +20,18 @@ def find_max(data):
     for num in data:
         if num>max_val:
             max_val=num
-    print (max_val)
+    # print (max_val)
     return max_val
 
 def search(data, user):
     found=False
     for i in range(len(data)):
         if data[i]==user:
-            print(i)
             found=True
+            break
     if found==False:   
-        print ("-1")
+        return "-1"
+    return f"Found at index{i}"
 
 def bubble_sort (data):
     copy=data.copy()
@@ -46,15 +50,20 @@ def quitting():
 
 def main ():
     while True:
-        show_menu()
-        user_input=input("Choose an option (1-5): ")
+        user_input=show_menu()
+        # user_input=input("Choose an option (1-5): ")
         if user_input=="1":
-            find_min (numbers)
+            min_val=find_min (numbers)
+            print (min_val)
         elif user_input=="2":
             find_max (numbers)
+            max_val=find_min (numbers)
+            print (max_val)
         elif user_input=="3":
+
             value=int(input("Enter number to search: "))
-            search (numbers, value)
+            i=search (numbers, value)
+
         elif user_input=="4":
             bubble_sort (numbers)
         elif user_input=="5":
