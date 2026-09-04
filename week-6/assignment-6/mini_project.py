@@ -3,19 +3,19 @@ numbers = [42, 17, 83, 5, 61, 29, 74, 8, 55, 93, 31, 66, 14, 47, 78, 3, 59, 22, 
 def show_menu():
     print ("=== Number Cruncher === \n1. Find minimum\n2. Find maximum\n3. Search for a number\n4. Sort the list\n5. Quit")
     user_choice=input("Choose an option (1-5): ")
-    print (user_choice)
+    # print (user_choice)
     return user_choice
 
 
 def find_min(data):
-    min_val=numbers[0]
+    min_val=data[0]
     for num in data:
         if num<min_val:
             min_val=num
     return min_val
 
 def find_max(data):
-    max_val=numbers[0]
+    max_val=data[0]
     for num in data:
         if num>max_val:
             max_val=num
