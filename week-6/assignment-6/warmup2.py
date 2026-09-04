@@ -14,4 +14,4 @@ result_c=celsius_to_fahrenheit(gr)
 print (f'{gr}°C = {result_c}°F')
 gr=72
 result_f=fahrenheit_to_celsius(gr)
-print (f'{gr}°F = {result_f}°F')
+print (f'{gr}°F = {result_f}°C')
