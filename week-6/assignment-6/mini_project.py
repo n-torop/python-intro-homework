@@ -28,10 +28,11 @@ def search(data, user):
     for i in range(len(data)):
         if data[i]==user:
             found=True
-            break
+            return i
+            # break
     if found==False:   
-        return "-1"
-    return f"Found at index{i}"
+        return -1
+    # return f"Found at index{i}"
 
 def bubble_sort (data):
     copy=data.copy()
@@ -51,18 +52,21 @@ def quitting():
 def main ():
     while True:
         user_input=show_menu()
-        # user_input=input("Choose an option (1-5): ")
         if user_input=="1":
             min_val=find_min (numbers)
             print (min_val)
         elif user_input=="2":
             find_max (numbers)
-            max_val=find_min (numbers)
+            max_val=find_max (numbers)
             print (max_val)
         elif user_input=="3":
 
             value=int(input("Enter number to search: "))
-            i=search (numbers, value)
+            result=search (numbers, value)
+            if result<0:
+                print ("Not found")
+            elif result>=0:
+                print (f"Found at index {result}")
 
         elif user_input=="4":
             bubble_sort (numbers)
