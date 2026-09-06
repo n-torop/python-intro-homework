@@ -6,14 +6,19 @@ import json
 
 load_dotenv()
 api_key=os.getenv("COUNTRY_API_KEY")
-params ={
+# params ={
     
-    "response_fields": "names.common, capital.name, region, population"
-}
+#     "response_fields": "names.common, capital.name, region, population"
+# }
 base_url= "https://api.restcountries.com/countries/v5"
+
+base_url= "https://api.restcountries.com/countries/v5?response_fields=names.official,capitals,region,population"
+
 headers={"Authorization": f"Bearer {api_key}"}
 try: 
-    response = requests.get(base_url, headers=headers, params=params)
+    # response = requests.get(base_url, headers=headers, params=params)
+    response = requests.get(base_url, headers=headers)
+
     status=response.raise_for_status()
     data=response.json()
     # else:
@@ -34,18 +39,18 @@ countries=data["data"]["objects"]
 
 
 
-with open ("api_data.json", "r") as file:
-    data_json=json.load(file)
+# with open ("api_data.json", "r") as file:
+#     data_json=json.load(file)
 
 
 # countries=data_json["data"]["objects"]
 # parsed_data=[]
 
 
-countries=data_json["data"]["objects"]
+# countries=data_json["data"]["objects"]
 parsed_data=[]
 for el in countries:
-    name=el.get("names", {}).get('common', "Unknown")
+    name=el.get("names", {}).get('official', "Unknown")
     capital=el.get("capital", "N/A")
     region=el.get('region',  "N/A")
     population=el.get('population')
@@ -68,19 +73,14 @@ def search(list_info):
             population_result=country.get("population", "N/A")
             capital_result=country.get("capital", "N/A")
             region_result=country.get("region", "N/A")
-            print (f"{country_name}, {region_result}, {population_result}, {capital_result}")
+            print (f"{country_name} -  Capital:  {capital_result} | Region: {region_result} | Population: {population_result}")
     if not matches_found:
-        print (f"No matching countries fount: {user_country}")
+        print (f"No matching countries found: {user_country}")
 
 def search_region(list_info):
     user_region=input("Enter region: ").lower()
-    matches_found=False
-
-
     filtered_countries=[]
-    
     for country in list_info:
-        # print(country)
         region_name=country.get("region", "").lower()
         if region_name==user_region:
             filtered_countries.append(country)
@@ -89,12 +89,8 @@ def search_region(list_info):
     for el in population_list:
         selected_country=el.get("name", '')
         selected_population=el.get("population", '')
-        print (f"Country: {selected_country} Population: {selected_population}")
+        print (f"Country: {selected_country} | Population: {selected_population}")
     
-
-    
-
-
 while True:
     print ("\n=== Country Explorer ===\n1. Search by name\n2. Filter by region\n3. Quit")
     user_input=int(input ("Choose an option (1-3): "))
