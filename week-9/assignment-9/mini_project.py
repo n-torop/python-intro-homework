@@ -10,7 +10,7 @@ api_key=os.getenv("COUNTRY_API_KEY")
     
 #     "response_fields": "names.common, capital.name, region, population"
 # }
-base_url= "https://api.restcountries.com/countries/v5"
+# base_url= "https://api.restcountries.com/countries/v5"
 
 base_url= "https://api.restcountries.com/countries/v5?response_fields=names.official,capitals,region,population"
 
@@ -21,33 +21,12 @@ try:
 
     status=response.raise_for_status()
     data=response.json()
-    # else:
-    #     print (f"{response.raise_for_status()}")
 except requests.exceptions.HTTPError:
     print (f'HTTP error occured')
 except requests.exceptions.RequestException as e:
         print ("Error: Could not reach the server. Check your connection and try again.")
-    
-
-
 countries=data["data"]["objects"]
-#############Create saved file with data
-# with open ("api_data.json", "w") as f:
-#     json.dump(data, f, indent=4)
-# print ("Data saved!")
 
-
-
-
-# with open ("api_data.json", "r") as file:
-#     data_json=json.load(file)
-
-
-# countries=data_json["data"]["objects"]
-# parsed_data=[]
-
-
-# countries=data_json["data"]["objects"]
 parsed_data=[]
 for el in countries:
     name=el.get("names", {}).get('official', "Unknown")
