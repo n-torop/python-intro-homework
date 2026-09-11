@@ -1,0 +1,8 @@
+.env
+.venv/
+venv/
+
+__pycache__/
+p2.py
+output.csv
+countries.jsonpython-intro-final-project/

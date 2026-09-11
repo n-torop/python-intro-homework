@@ -26,7 +26,7 @@ def fetch_data(region):
     except requests.exceptions.RequestException as e:
             print ("Error: Could not reach the server. Check your connection and try again.")
 
-def parsing(data):
+def process_data(data):
     countries=data["data"]["objects"]
     parsed_data=[]
 
@@ -174,13 +174,13 @@ def main():
 
         user_region=get_region_user()
         data=fetch_data(user_region) 
-        new_l=parsing(data)
+        new_l=process_data(data)
         
         if user_input==1:
             description_res=search_description(new_l)
         elif user_input==2:
             membership_results=filter_by_membership(new_l)
         
-         
-main()
+if __name__=="__main__":
+    main()
 
