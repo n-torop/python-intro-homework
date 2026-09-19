@@ -64,7 +64,12 @@ def search_region(list_info):
         if region_name==user_region:
             filtered_countries.append(country)
         
-    population_list=sorted(filtered_countries, key=lambda x: x["population"])
+    population_list=sorted(
+        filtered_countries, 
+        key=lambda x: x["population"], 
+        reverse=True
+        )
+    
     for el in population_list:
         selected_country=el.get("name", '')
         selected_population=el.get("population", '')
